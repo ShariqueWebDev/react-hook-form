@@ -19,6 +19,7 @@ interface InputDataProps {
 }
 
 // let renderCount = 0;
+// let renderCount = 0;
 const YoutbeForm = () => {
   const [phone, setPhone] = useState("");
 
@@ -59,6 +60,7 @@ const YoutbeForm = () => {
     control,
   });
 
+  // renderCount++;
   // renderCount++;
   const onSubmit = (data: InputDataProps) => {
     console.log(data);

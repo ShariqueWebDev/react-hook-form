@@ -31,7 +31,7 @@ const AnimatedText = () => {
       // y: 0,
       duration: 0.5,
       stagger: 0.1, // Sequential animation for each character
-      ease: "power2.out",
+      ease: "power3.out",
     });
   }, []);
 

@@ -1,4 +1,5 @@
 import ThumbnailCarousel from "@/components/Carousel/ThumbnailCarousel";
+// import GradientComp from "@/components/GradientComp";
 import GsapComponet from "@/components/Gsapcomp";
 import Features from "@/components/GsapOnText";
 import Typescript from "@/components/Typescript";
@@ -31,7 +32,8 @@ export default function Home() {
   ];
   return (
     <div className="">
-      <GsapComponet />
+      {/* <GsapComponet /> */}
+      {/* <GradientComp /> */}
       <Features />
       {/* <div className="relative h-[100vh]  w-[100%]">
         <video

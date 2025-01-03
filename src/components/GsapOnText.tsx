@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { featuresData } from "../../constant/featureData";
+import ReactLenis from "@studio-freight/react-lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,17 +27,11 @@ const Features = ({ features, showTitle = true }: any) => {
         .map((char) => `<span class="char">${char}</span>`)
         .join(""); // Wrap each character in a span
 
-      // Gradients to transition through
+      // Gradients to transition through (bottom to top)
       const gradientColors = [
-        `linear-gradient(to right, gray, grey, green)`,
-        `linear-gradient(to right, green, green)`,
-        `linear-gradient(to right, green, green)`,
-        `linear-gradient(to right, green, yellow)`,
-        // `linear-gradient(to right, yellow, yellow)`,
-        `linear-gradient(to right, yellow, green)`,
-        `linear-gradient(to right, green, green)`,
-        `linear-gradient(to right, green, green)`,
-        `linear-gradient(to right, gray, grey, white)`,
+        `linear-gradient(to top,#250b50, #250b50, black )`,
+        `linear-gradient(to top,   #f4a4f4,  #fff, #f4a4f4, #250b50 )`,
+        `linear-gradient(to bottom, #f4a4f4, #250b50, black, black, black)`,
       ];
 
       const characters = description.querySelectorAll<HTMLElement>(".char");
@@ -45,9 +40,9 @@ const Features = ({ features, showTitle = true }: any) => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: feature,
-          start: "top top",
-          end: "+=3000px", // Extended pin duration for slower animation
-          scrub: 1, // Smooth scrolling
+          start: "top 10%",
+          end: "+=1200px", // Extended pin duration for slower animation
+          scrub: 5, // Smooth scrolling
           pin: true, // Pin the section
           markers: false,
         },
@@ -57,7 +52,7 @@ const Features = ({ features, showTitle = true }: any) => {
       gradientColors.forEach((gradient, i) => {
         timeline.to(description, {
           backgroundImage: gradient,
-          duration: 1.5, // Adjust duration for slower transitions
+          duration: 0.5, // Adjust duration for slower transitions
           ease: "linear",
         });
       });
@@ -67,7 +62,7 @@ const Features = ({ features, showTitle = true }: any) => {
         characters,
         {
           opacity: 0, // Fade out characters
-          stagger: 0.05, // Delay between each character fade-out
+          //   stagger: 0.05, // Delay between each character fade-out
           duration: 0.5,
           ease: "power3.inOut",
         },
@@ -81,56 +76,57 @@ const Features = ({ features, showTitle = true }: any) => {
   }, []);
 
   return (
-    <section id="features" className="bg-black text-white py-16">
-      <div className="container mx-auto px-6 lg:px-12">
-        {showTitle && (
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Explore Our <span className="text-gray-500">Features</span>
-            </h2>
-            <p className="text-gray-400 text-lg">
-              Seamlessly integrate powerful tools to transform your business.
-            </p>
-          </div>
-        )}
-
-        <div className="space-y-16">
-          {featuresState.map((feature: any, index: number) => (
-            <div
-              key={index}
-              className={`feature-item flex flex-col lg:flex-row items-center gap-8 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              <div className="lg:w-[35%] relative">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="lg:w-[65%] space-y-4">
-                <h3 className="md:text-4xl text-2xl font-bold">
-                  {feature.title}
-                </h3>
-                <p
-                  style={{
-                    overflow: "hidden",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundImage:
-                      "linear-gradient(to right",
-                  }}
-                  className="reveal-description text-gray-400 md:text-2xl text-base font-meduim text-left"
-                >
-                  {feature.description}
-                </p>
-              </div>
+    <ReactLenis root>
+      <section id="features" className="bg-black text-white py-16">
+        <div className="container mx-auto px-6 lg:px-12">
+          {showTitle && (
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                Explore Our <span className="text-gray-500">Features</span>
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Seamlessly integrate powerful tools to transform your business.
+              </p>
             </div>
-          ))}
+          )}
+
+          <div className="space-y-16">
+            {featuresState.map((feature: any, index: number) => (
+              <div
+                key={index}
+                className={`feature-item flex flex-col lg:flex-row items-center gap-8 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
+                {/* <div className="lg:w-[35%] relative">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="rounded-lg shadow-lg"
+                  />
+                </div> */}
+                <div className=" space-y-4 flex justify-center items-center ">
+                  {/* <h3 className="md:text-4xl text-2xl font-bold">
+                    {feature.title}
+                  </h3> */}
+                  <p
+                    style={{
+                      overflow: "hidden",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundImage: "linear-gradient(to top, black)",
+                    }}
+                    className="w-[70%] reveal-description text-gray-400 md:text-6xl text-base font-bold text-left"
+                  >
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>{" "}
+    </ReactLenis>
   );
 };
 

@@ -44,7 +44,7 @@ const Features = ({ features, showTitle = true }: any) => {
           end: "+=1300px", // Extended pin duration for slower animation
           scrub: 1, // Smooth scrolling
           pin: true, // Pin the section
-          markers: true,
+          // markers: true,
         },
       });
 

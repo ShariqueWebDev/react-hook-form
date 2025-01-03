@@ -29,9 +29,9 @@ const Features = ({ features, showTitle = true }: any) => {
 
       // Gradients to transition through (bottom to top)
       const gradientColors = [
-        `linear-gradient(to top,#250b50, #250b50, black )`,
+        `linear-gradient(to top,#250b50, #250b50, black, black )`,
         `linear-gradient(to top,   #f4a4f4,  #fff, #f4a4f4, #250b50 )`,
-        `linear-gradient(to bottom, #f4a4f4, #250b50, black, black, black)`,
+        `linear-gradient(to bottom, #f4a4f4, #250b50, black, black)`,
       ];
 
       const characters = description.querySelectorAll<HTMLElement>(".char");
@@ -41,10 +41,10 @@ const Features = ({ features, showTitle = true }: any) => {
         scrollTrigger: {
           trigger: feature,
           start: "top 10%",
-          end: "+=1200px", // Extended pin duration for slower animation
-          scrub: 5, // Smooth scrolling
+          end: "+=1300px", // Extended pin duration for slower animation
+          scrub: 1, // Smooth scrolling
           pin: true, // Pin the section
-          markers: false,
+          markers: true,
         },
       });
 
@@ -53,7 +53,7 @@ const Features = ({ features, showTitle = true }: any) => {
         timeline.to(description, {
           backgroundImage: gradient,
           duration: 0.5, // Adjust duration for slower transitions
-          ease: "linear",
+          ease: "power1.inOut",
         });
       });
 
@@ -64,9 +64,9 @@ const Features = ({ features, showTitle = true }: any) => {
           opacity: 0, // Fade out characters
           //   stagger: 0.05, // Delay between each character fade-out
           duration: 0.5,
-          ease: "power3.inOut",
+          ease: "power2.inOut",
         },
-        "+=0.5" // Delay after gradient transitions
+        "+=0" // Delay after gradient transitions
       );
     });
 
@@ -98,17 +98,7 @@ const Features = ({ features, showTitle = true }: any) => {
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
-                {/* <div className="lg:w-[35%] relative">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="rounded-lg shadow-lg"
-                  />
-                </div> */}
                 <div className=" space-y-4 flex justify-center items-center ">
-                  {/* <h3 className="md:text-4xl text-2xl font-bold">
-                    {feature.title}
-                  </h3> */}
                   <p
                     style={{
                       overflow: "hidden",

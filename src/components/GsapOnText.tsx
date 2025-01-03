@@ -29,8 +29,8 @@ const Features = ({ features, showTitle = true }: any) => {
 
       // Gradients to transition through (bottom to top)
       const gradientColors = [
-        `linear-gradient(to top,#250b50, #250b50, black, black )`,
-        `linear-gradient(to top,   #f4a4f4,  #fff, #f4a4f4, #250b50 )`,
+        `linear-gradient(to top,#250b50, #250b50, black, black, black )`,
+        `linear-gradient(to top,   #f4a4f4,  #fff, #fff, #f4a4f4, #250b50 )`,
         `linear-gradient(to bottom, #f4a4f4, #250b50, black, black)`,
       ];
 
@@ -65,7 +65,7 @@ const Features = ({ features, showTitle = true }: any) => {
           //   stagger: 0.05, // Delay between each character fade-out
           duration: 0.5,
           ease: "power2.inOut",
-        },
+        }
         // "+=0.1" // Delay after gradient transitions
       );
     });

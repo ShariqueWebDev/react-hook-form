@@ -41,7 +41,7 @@ const Features = ({ features, showTitle = true }: any) => {
         scrollTrigger: {
           trigger: feature,
           start: "top 10%",
-          end: "+=1300px", // Extended pin duration for slower animation
+          end: "+=1500px", // Extended pin duration for slower animation
           scrub: 1, // Smooth scrolling
           pin: true, // Pin the section
           // markers: true,
@@ -66,7 +66,7 @@ const Features = ({ features, showTitle = true }: any) => {
           duration: 0.5,
           ease: "power2.inOut",
         },
-        "+=0" // Delay after gradient transitions
+        // "+=0.1" // Delay after gradient transitions
       );
     });
 

@@ -29,7 +29,7 @@ const Features = ({ features, showTitle = true }: any) => {
 
       // Gradients to transition through (bottom to top)
       const gradientColors = [
-        `linear-gradient(to top,#250b50, #250b50, black, black, black )`,
+        `linear-gradient(to top, #edb6ed, #250b50, #250b50, black, black, black )`,
         `linear-gradient(to top,   #f4a4f4,  #fff, #fff, #f4a4f4, #250b50 )`,
         `linear-gradient(to bottom, #f4a4f4, #250b50, black, black)`,
       ];
@@ -41,8 +41,8 @@ const Features = ({ features, showTitle = true }: any) => {
         scrollTrigger: {
           trigger: feature,
           start: "top 10%",
-          end: "+=1500px", // Extended pin duration for slower animation
-          scrub: 1, // Smooth scrolling
+          end: "+=1000px", // Extended pin duration for slower animation
+          scrub: 2, // Smooth scrolling
           pin: true, // Pin the section
           // markers: true,
         },
@@ -52,8 +52,8 @@ const Features = ({ features, showTitle = true }: any) => {
       gradientColors.forEach((gradient, i) => {
         timeline.to(description, {
           backgroundImage: gradient,
-          duration: 0.5, // Adjust duration for slower transitions
-          ease: "power1.inOut",
+          duration: 1.5, // Adjust duration for slower transitions
+          ease: "none",
         });
       });
 
@@ -63,10 +63,10 @@ const Features = ({ features, showTitle = true }: any) => {
         {
           opacity: 0, // Fade out characters
           //   stagger: 0.05, // Delay between each character fade-out
-          duration: 0.5,
-          ease: "power2.inOut",
-        }
-        // "+=0.1" // Delay after gradient transitions
+          duration: 1,
+          ease: "none",
+        },
+        "+=0.1" // Delay after gradient transitions
       );
     });
 
@@ -76,7 +76,7 @@ const Features = ({ features, showTitle = true }: any) => {
   }, []);
 
   return (
-    <ReactLenis root>
+    // <ReactLenis root>
       <section id="features" className="bg-black text-white py-16">
         <div className="container mx-auto px-6 lg:px-12">
           {showTitle && (
@@ -115,8 +115,8 @@ const Features = ({ features, showTitle = true }: any) => {
             ))}
           </div>
         </div>
-      </section>{" "}
-    </ReactLenis>
+      </section>
+    // </ReactLenis>
   );
 };
 

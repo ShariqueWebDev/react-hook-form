@@ -2,7 +2,7 @@ export const featuresData = [
   {
     title: "Customizable Templates",
     description:
-      "Creating a visually stunning and highly functional website has never been easier. With our platform, and highly functional website has never been easier. With our platform, ",
+      "Creating a visually stunning and highly functional website has never been easier. With our platform, and highly functional website has never been easier. With our platform, never been easier. With our, ",
     image: "https://sagartech.co.in/seo-mockups/SEO_Armaf_45.webp",
     redirectLink: "#custom-templates",
   },

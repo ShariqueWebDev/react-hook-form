@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -77,45 +76,45 @@ const Features = ({ features, showTitle = true }: any) => {
 
   return (
     // <ReactLenis root>
-      <section id="features" className="bg-black text-white py-16">
-        <div className="container mx-auto px-6 lg:px-12">
-          {showTitle && (
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">
-                Explore Our <span className="text-gray-500">Features</span>
-              </h2>
-              <p className="text-gray-400 text-lg">
-                Seamlessly integrate powerful tools to transform your business.
-              </p>
-            </div>
-          )}
-
-          <div className="space-y-16">
-            {featuresState.map((feature: any, index: number) => (
-              <div
-                key={index}
-                className={`feature-item flex flex-col lg:flex-row items-center gap-8 ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                <div className=" space-y-4 flex justify-center items-center ">
-                  <p
-                    style={{
-                      overflow: "hidden",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundImage: "linear-gradient(to top, black)",
-                    }}
-                    className="w-[70%] reveal-description text-gray-400 md:text-6xl text-base font-bold text-left"
-                  >
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+    <section id="features" className="bg-black text-white py-16">
+      <div className="container mx-auto px-6 lg:px-12">
+        {showTitle && (
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              Explore Our <span className="text-gray-500">Features</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Seamlessly integrate powerful tools to transform your business.
+            </p>
           </div>
+        )}
+
+        <div className="space-y-16">
+          {featuresState.map((feature: any, index: number) => (
+            <div
+              key={index}
+              className={`feature-item flex flex-col lg:flex-row items-center gap-8 ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
+            >
+              <div className=" space-y-4 flex justify-center items-center ">
+                <p
+                  style={{
+                    overflow: "hidden",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundImage: "linear-gradient(to top, black)",
+                  }}
+                  className="w-[70%] reveal-description text-gray-400 md:text-6xl text-base font-bold text-left"
+                >
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
     // </ReactLenis>
   );
 };

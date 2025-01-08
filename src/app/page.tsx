@@ -2,7 +2,10 @@ import ThumbnailCarousel from "@/components/Carousel/ThumbnailCarousel";
 // import GradientComp from "@/components/GradientComp";
 import GsapComponet from "@/components/Gsapcomp";
 import Features from "@/components/GsapOnText";
+import GsapVideo from "@/components/GsapVideo";
+import ReactGsap from "@/components/ReactGsap";
 import Typescript from "@/components/Typescript";
+import ZoomImage from "@/components/ZoomImage";
 // import { headers, cookies } from "next/headers";
 
 export const revalidate = 50;
@@ -34,7 +37,10 @@ export default function Home() {
     <div className="">
       {/* <GsapComponet /> */}
       {/* <GradientComp /> */}
-      <Features />
+      {/* <GsapVideo /> */}
+      <ZoomImage/>
+      {/* <ReactGsap /> */}
+      {/* <Features /> */}
       {/* <div className="relative h-[100vh]  w-[100%]">
         <video
           poster="/videoPlaceholder.webp"

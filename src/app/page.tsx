@@ -2,9 +2,13 @@ import ThumbnailCarousel from "@/components/Carousel/ThumbnailCarousel";
 // import GradientComp from "@/components/GradientComp";
 import GsapComponet from "@/components/Gsapcomp";
 import Features from "@/components/GsapOnText";
+import GsapRotateMultiLine from "@/components/GsapRotateMultiLine";
+import GsapRotateSingleLine from "@/components/GsapRotateSingleline";
+// import GsapReusaubleComp from "@/components/GsapRotateSingleline";
 import GsapVideo from "@/components/GsapVideo";
 import ReactGsap from "@/components/ReactGsap";
 import Typescript from "@/components/Typescript";
+import ZoomBanner from "@/components/ZoomBanner";
 import ZoomImage from "@/components/ZoomImage";
 // import { headers, cookies } from "next/headers";
 
@@ -35,7 +39,10 @@ export default function Home() {
   ];
   return (
     <div className="">
+      {/* <ZoomBanner /> */}
       {/* <GsapComponet /> */}
+      {/* <GsapRotateSingleLine /> */}
+      {/* <GsapRotateMultiLine /> */}
       {/* <GradientComp /> */}
       {/* <GsapVideo /> */}
       <ZoomImage/>

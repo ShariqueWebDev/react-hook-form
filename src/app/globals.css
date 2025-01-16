@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,34 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Regular.otf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  /* font-family: "Boska"; */
+  /* height: 300vh; */
+  /* display: flex;
+  align-items: center; */
+}
+
+.char {
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+/* 
+
+.poppins-thin {
+  font-weight: 100;
+  font-style: normal;
 }
 
 .swiper {
@@ -18,7 +47,6 @@
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +68,6 @@
   color: #00a8e8 !important;
 }
 
-/* styles/ThumbnailCarousel.module.css */
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -111,16 +138,15 @@
   right: 10px;
 }
 
-table{
+table {
   border: 1px solid gray;
 }
 
-tr, th, td{
+tr,
+th,
+td {
   padding: 5px;
   text-align: center;
   border-collapse: collapse;
   border: 1px solid gray;
-}
-
-
-
+} */

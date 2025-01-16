@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Barlow} from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
 import GsapComponet from "@/components/Gsapcomp";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+const boskaSans = localFont({
+  src: "./fonts/BoskaVariable.ttf",
+  variable: "--font-boska",
+  preload:true,
+  adjustFontFallback:"Times New Roman",
+  weight: "100",
+
+});
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -17,10 +25,10 @@ const geistMono = localFont({
 });
 
 const barlowSans = Barlow({
-  subsets:["latin"],
-  variable:"--font-barlow",
-  weight:['200', '300', '400']
-})
+  subsets: ["latin"],
+  variable: "--font-barlow",
+  weight: ["200", "300", "400"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${barlowSans.variable} antialiased`}
+        className={`${geistSans.variable} ${boskaSans.variable} ${geistMono.variable} ${barlowSans.variable} antialiased`}
       >
         {children}
         {/* <GsapComponet/> */}

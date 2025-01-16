@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { featuresData } from "../../constant/featureData";
-import ReactLenis from "@studio-freight/react-lenis";
+// import ReactLenis from "@studio-freight/react-lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,8 +22,7 @@ const Features = ({ features, showTitle = true }: any) => {
 
       // Split the description text into individual characters
       const text = description.innerText.split("");
-      description.innerHTML = text
-        .map((char) => `<span class="char">${char}</span>`)
+      description.innerHTML = text.map((char) => `<span class="char">${char}</span>`)
         .join(""); // Wrap each character in a span
 
       // Gradients to transition through (bottom to top)

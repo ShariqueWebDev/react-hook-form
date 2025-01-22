@@ -3,6 +3,11 @@ import localFont from "next/font/local";
 import { Barlow } from "next/font/google";
 import "./globals.css";
 import GsapComponet from "@/components/Gsapcomp";
+import Menu from "@/components/menu/Menu";
+import Menu2 from "@/components/menu/Menu2";
+import ContactUs from "@/components/menu/ContactUsTask";
+import Task2 from "@/components/menu/Task2";
+import Task3 from "@/components/menu/Task3";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,10 +17,9 @@ const geistSans = localFont({
 const boskaSans = localFont({
   src: "./fonts/BoskaVariable.ttf",
   variable: "--font-boska",
-  preload:true,
-  adjustFontFallback:"Times New Roman",
+  preload: true,
+  adjustFontFallback: "Times New Roman",
   weight: "100",
-
 });
 
 const geistMono = localFont({
@@ -43,8 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${boskaSans.variable} ${geistMono.variable} ${barlowSans.variable} antialiased`}
+        className={`${geistSans.variable} ${boskaSans.variable} ${geistMono.variable} ${barlowSans.variable} antialiased bg-black`}
       >
+        {/* <Menu /> */}
+        <Menu2/>
+        {/* <ContactUs /> */}
+        {/* <Task2/> */}
+        {/* <Task3/> */}
         {children}
         {/* <GsapComponet/> */}
       </body>

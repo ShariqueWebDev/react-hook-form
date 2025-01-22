@@ -1,4 +1,6 @@
 import ThumbnailCarousel from "@/components/Carousel/ThumbnailCarousel";
+import Flex from "@/components/Flex";
+import FlexCenter from "@/components/FlexCenter";
 // import GradientComp from "@/components/GradientComp";
 import GsapComponet from "@/components/Gsapcomp";
 import Features from "@/components/GsapOnText";
@@ -45,7 +47,9 @@ export default function Home() {
       {/* <GsapRotateMultiLine /> */}
       {/* <GradientComp /> */}
       {/* <GsapVideo /> */}
-      <ZoomImage/>
+      {/* <ZoomImage/> */}
+      {/* <Flex/> */}
+      {/* <FlexCenter/> */}
       {/* <ReactGsap /> */}
       {/* <Features /> */}
       {/* <div className="relative h-[100vh]  w-[100%]">
@@ -75,41 +79,7 @@ export default function Home() {
       <div className="my-16">
         <h1 className="">Table of Content</h1>
         <div className="my-10">
-          <table>
-            <thead>
-              <th colSpan={5}>name</th>
-            </thead>
-            <thead>
-              <th></th>
-              <th>name</th>
-              <th>age</th>
-              <th>skin color</th>
-              <th>height</th>
-            </thead>
-
-            <tbody>
-              <tr>
-                <th rowSpan={5}>Client Details</th>
-              </tr>
-              <tr>
-                <td>john</td>
-                <td>65</td>
-                <td>black</td>
-                <td>6.5</td>
-              </tr>
-              <tr>
-                <td rowSpan={2}>william</td>
-                <td>52</td>
-                <td>black</td>
-                <td>5.3</td>
-              </tr>
-              <tr>
-                <td>52</td>
-                <td>black</td>
-                <td>5.3</td>
-              </tr>
-            </tbody>
-          </table>
+         
         </div>
       </div>
       <Typescript /> */}

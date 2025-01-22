@@ -12,15 +12,16 @@ const StickyScaleSection = () => {
   const widthRef = useRef(null);
 
   useGSAP(() => {
+
     gsap.fromTo(
       textRef.current,
-      { opacity: 0, rotateY: -90 }, // Initial state: Invisible and flipped 90 degrees
+      { opacity: 0, rotateY: -90,  }, // Initial state: Invisible and flipped 90 degrees
       {
         opacity: 1, // Fully visible
         rotateY: 0, // No rotation (normal position)
         duration: 2, // Control animation duration
-        stagger: 0.3,
-        fontSize: "10rem",
+        stagger:0.3,
+        fontSize:"10rem",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top", // Start animation when the section is pinned
@@ -33,10 +34,11 @@ const StickyScaleSection = () => {
       widthRef.current,
       {
         width: 450,
+        // height:350
       },
       {
         width: "100%",
-        height: "100%",
+        height:"100%",
         duration: 2,
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -59,10 +61,11 @@ const StickyScaleSection = () => {
           className=" flex justify-end items-center bg-[#c0c4bf] overflow-hidden relative"
           ref={widthRef}
           style={{
-            backgroundImage: "url(/girl.jpg)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
+            backgroundImage:"url(/girl.jpg)",
+            backgroundPosition:"center",
+            backgroundSize:"cover",
+            backgroundRepeat:"no-repeat"
+
           }}
         >
           <div

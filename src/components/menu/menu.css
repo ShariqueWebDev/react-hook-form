@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #000;
+}
+
+.menu-bar,
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu-bar a,
+.menu-bar p {
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-close p {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  background: #cf5b45;
+  z-index: 2;
+  display: flex;
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%); */
+
+}
+
+.menu-close-icon {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-copy {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-preview {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.menu-close-icon p {
+  font-size: 100px;
+  -webkit-text-stroke: 5px #c5fb45;
+  line-height: 70%;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.menu-tink-item-holder {
+  position: relative;
+}
+
+.menu-link-item-holder a {
+  color: 0#000;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 85%;
+}
+
+.menu-info {
+  display: flex;
+}
+
+.menu-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* GLOBAL CSS//////////// */
+a,
+p {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 6em 2em;
+}
+
+.page-content .hero {
+  background: url("/hero.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+h1 sup {
+  position: relative;
+  top: -20px;
+  left: 10px;
+  font-size: 1.5vw;
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .page-content h1 {
+    font-size: 10vw;
+  }
+
+  h1 sup {
+    font-size: 4vw;
+  }
+}

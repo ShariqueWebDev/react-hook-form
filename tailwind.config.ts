@@ -11,10 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        darkGolden: "#BD842F",
+        lightGolden: "#FBD973",
       },
-      fontFamily:{
-        barlow:"var(--font-barlow)"
-      }
+      fontFamily: {
+        barlow: "var(--font-barlow)",
+      },
     },
   },
   plugins: [],

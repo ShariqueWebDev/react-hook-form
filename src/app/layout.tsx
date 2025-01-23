@@ -8,6 +8,7 @@ import Menu2 from "@/components/menu/Menu2";
 import ContactUs from "@/components/menu/ContactUsTask";
 import Task2 from "@/components/menu/Task2";
 import Task3 from "@/components/menu/Task3";
+import Hero from "@/components/menu/HeroSection/HeroSection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,10 +51,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${boskaSans.variable} ${geistMono.variable} ${barlowSans.variable} antialiased bg-black`}
       >
         {/* <Menu /> */}
-        <Menu2/>
+        {/* <Menu2/> */}
         {/* <ContactUs /> */}
         {/* <Task2/> */}
         {/* <Task3/> */}
+        <Hero />
         {children}
         {/* <GsapComponet/> */}
       </body>
